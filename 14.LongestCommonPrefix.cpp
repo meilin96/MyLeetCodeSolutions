@@ -4,10 +4,10 @@ public:
         string s;
         if(strs.empty()==true)
             return s;
+        if(strs.size() == 1)
+            return strs[0];
         bool f = true;
-        int i = 0;
-        int n = strs[0].size();
-        while(n--){
+        for(int i = 0;i < strs[0].size();i++){
             auto b = strs.begin();
             char c = (*b)[i];
             for(;b != strs.end();b++){
@@ -15,11 +15,10 @@ public:
                     f = false;
                 }
             }
-            ++i;
-            if(f == false)
-                break;
-            else
+            if(f)
                 s.push_back(c);
+            else
+                break;
         }
         return s;
     }
