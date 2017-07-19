@@ -25,16 +25,28 @@ int ireverse(int x) {
         if(flag) n = -n;
         return n;
 }
-int ir(int x)
-{
-	int res = 0;
-	while(x){	
-		int c = x%10;
-		res = res*10 + c;
-		x/=10;
-	}
-	return res;
-}
+class Solution {
+public:
+    int reverse(int x) {
+        long long lx = x;
+        if(lx > ~(1 << 31) || lx < (1 << 31))
+            return 0;
+        bool isF = false;
+        if(lx < 0){
+            lx = -lx;
+            isF = true;
+        }
+        long long res = 0;
+        while(lx){
+            long long c = lx%10;
+            lx/=10;
+            res = res*10 + c;
+            if(res > 2147483647)
+                return 0;
+        }
+        return isF?-res:res;
+    }
+};
 int main()
 {
 //	std::cout << sizeof(int) << std::endl;
