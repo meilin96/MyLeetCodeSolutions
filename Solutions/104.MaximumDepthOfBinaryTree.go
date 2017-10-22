@@ -5,7 +5,7 @@ func maxDepth(root *TreeNode) int{
     return max(maxDepth(root.Left), maxDepth(root.Right))+1
 }
 func max(a int, b int) int{
-    if a < b{
+    if a > b{
         return a
     }else {
         return b
