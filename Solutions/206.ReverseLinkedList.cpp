@@ -17,4 +17,15 @@ public:
     }
     return p2;
   }
+  ListNode* reverse(ListNode* head){
+    ListNode* p = NULL;
+    while(head != NULL){
+        ListNode* p1 = head;
+        head = head->next;
+        p1.next = p;
+        p = p1;
+    }
+    return p;
+  }
 };
+
