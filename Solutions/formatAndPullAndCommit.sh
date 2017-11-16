@@ -4,7 +4,7 @@ if [ ! -n "$1" ] ;then
 else
     echo "The file name you've input is ______$1______"
 fi
-clang-format-3.9 tem > $1
+clang-format-4.0 tem > $1
 rm tem
 git pull origin master
 git add $1
