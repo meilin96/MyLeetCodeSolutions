@@ -6,7 +6,7 @@ public:
     int max = 1 << 31;
     for (int i = 0; i < nums.size(); i++) {
       int tem = nums[i];
-      if (i < 0)
+      if (nums[i] < 0)
         tem = -tem;
       if (tem > max)
         max = tem;
@@ -21,7 +21,7 @@ public:
     for (int i = 0; i < h.size(); i++) {
       if (h[i] == 1)
         if (i <= max)
-          return -max;
+          return -i;
         else
           return i - max - 1;
     }
