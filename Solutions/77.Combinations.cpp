@@ -2,22 +2,20 @@ class Solution {
   public:
     vector<vector<int>> combine(int n, int k) {
         vector<vector<int>> res;
-        vector<int> subr;
-        backtracking(res, subr, 1, n, k, 1);
-        backtracking(res, subr, 1, n, k, 0);
+        vector<int> subr(k, 0);
+        backtracking(res, subr, 1, 0, n, k);
         return res;
     }
 
-    void backtracking(vector<vector<int>> &res, vector<int> subr, int p, int n,
-                      int k, bool c) {
-        if (p > n || (subr.size() + 1 > k))
+    void backtracking(vector<vector<int>> &res, vector<int> &subr, int p,
+                      int cnt, int n, int k) {
+        if (k == 0) {
+            res.push_back(subr);
             return;
-        if (c) {
-            subr.push_back(p);
-            if (subr.size() == k)
-                res.push_back(subr);
         }
-        backtracking(res, subr, p + 1, n, k, 1);
-        backtracking(res, subr, p + 1, n, k, 0);
+        for (int i = p; i <= n; i++) {
+            subr[cnt] = i;
+            backtracking(res, subr, i + 1, cnt + 1, n, k - 1);
+        }
     }
 };
