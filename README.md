@@ -16,7 +16,7 @@ This is my solutions to LeetCode
 |27|RemoveElement||[C++](https://github.com/meilin996/MyLeetCodeSolutions/blob/master/Solutions/27.RemoveElement.cpp)|||
 |35|SearchInsertPosition||[C++](https://github.com/meilin996/MyLeetCodeSolutions/blob/master/Solutions/35.SearchInsertPosition.cpp)|||
 |38|CountAndSay||[C++](https://github.com/meilin996/MyLeetCodeSolutions/blob/master/Solutions/38.CountAndSay.cpp)|||
-|38|Permutations||[Go](https://github.com/meilin996/MyLeetCodeSolutions/blob/master/Solutions/46.Permutations.go)|||
+|46|Permutations||[Go](https://github.com/meilin996/MyLeetCodeSolutions/blob/master/Solutions/46.Permutations.go)|||
 |53|MaximumSubarray||[C++](https://github.com/meilin996/MyLeetCodeSolutions/blob/master/Solutions/53.MaximumSubarray.cpp)|||
 |58|LengthOfLastWord||||[Python](https://github.com/meilin996/MyLeetCodeSolutions/blob/master/Solutions/58.LengthOfLastWord.py)|
 |66|PlusOne||[C++](https://github.com/meilin996/MyLeetCodeSolutions/blob/master/Solutions/66.PlusOne.cpp)|[Go](https://github.com/meilin996/MyLeetCodeSolutions/blob/master/Solutions/66.PlusOne.go)||
